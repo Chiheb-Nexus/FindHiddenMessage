@@ -33,7 +33,7 @@ class FindHiddenMsgBlockchain:
 			for number in range(int(start), int(stop)+1):
 				data = self.get_block_hash(url = url, block_number = str(number))
 				
-				print("[+] Fetching data for block: \t{0}".format(data["data"]["hash"]))
+				print("[+] Fetching data for block: \tNmber: {0}\tHash: {1}".format(number, data["data"]["hash"]))
 				self.run_output(block_hash = data["data"]["hash"], file_name = str(number))
 				print("-> Data fetched.")
 				
